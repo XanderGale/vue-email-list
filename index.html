@@ -26,7 +26,9 @@
 
     <div id="app-container">
 
-        <ul v-show="emailsArray.length > emailsNumber - 2" class="emails-list">
+        <i v-show="emailsArray.length < emailsNumber -1" class="rotate fas fa-circle-notch"></i>
+
+        <ul v-show="emailsArray.length > emailsNumber -1" class="emails-list">
             <li v-for="(email,index) in emailsArray" class="email"> {{ email }} </li>
         </ul>
 
