@@ -7,6 +7,8 @@
 
 /* Common */
 body{
+    font-family: 'Roboto', sans-serif;
+
     background-color: lightskyblue;
 
     width: 100%;
@@ -34,17 +36,22 @@ body{
 }
 .emails-list{
     list-style-type: none;
+
+    margin: 30px auto;
 }
 .email{
     margin: 10px auto;
+    
+    text-align: center;
 }
 
 /* Animations */
 .rotate {
     -webkit-animation: rotate 5s normal linear infinite;
-    animation: rotate 5s normal linear infinite;
+    animation: rotate 2s normal linear infinite;
 
     font-size: 50px;
+    margin: 30px auto;
 }
 @keyframes rotate {
     0% {
