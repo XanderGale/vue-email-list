@@ -26,8 +26,8 @@
 
     <div id="app-container">
 
-        <ul class="emails-list">
-            <li v-for="email in emailsArray" class="email"> {{ email }} </li>
+        <ul v-show="emailsArray.length > emailsNumber - 2" class="emails-list">
+            <li v-for="(email,index) in emailsArray" class="email"> {{ email }} </li>
         </ul>
 
     </div>

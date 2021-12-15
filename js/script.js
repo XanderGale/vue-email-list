@@ -11,13 +11,14 @@ Vue.config.devtools = true
 const email_list = new Vue({
     el: '#app-container',
     data: {
+        emailsNumber: 10,
         emailsArray: [],
     },
     methods: {
         
     },
-    created: function() {
-        const emailsNumber = 10;
+    created: function(emailsNumber) {
+        emailsNumber = this.emailsNumber;
         for (let i = 0; i < emailsNumber; i++){
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((axiosResponse) => {
