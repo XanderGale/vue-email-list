@@ -28,7 +28,7 @@
 
         <h1>Lista Emails:</h1>
 
-        <i v-show="emailsArray.length < emailsNumber -1" class="rotate fas fa-circle-notch"></i>
+        <i v-show="emailsArray.length < emailsNumber -1" class="rotate fas fa-spinner"></i>
 
         <ul v-show="emailsArray.length > emailsNumber -1" class="emails-list">
             <li v-for="(email,index) in emailsArray" class="email"> {{ email }} </li>
