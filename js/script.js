@@ -15,11 +15,20 @@ const email_list = new Vue({
         emailsArray: [],
     },
     methods: {
-        
+        // Soluzione alessio per asyncronizzazione
+        // getEmail(){
+        //     axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        //     .then((axiosResponse) => {
+        //         // console.log(axiosResponse.data.response);
+        //         this.emailsArray.push(axiosResponse.data.response)
+        //         if(this.emailsArray.length<this.emailsNumber){
+        //             this.getEmail()
+        //         }
+        //     })
+        // }
     },
-    created: function(emailsNumber) {
-        emailsNumber = this.emailsNumber;
-        for (let i = 0; i < emailsNumber; i++){
+    created: function() {
+        for (let i = 0; i < this.emailsNumber; i++){
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((axiosResponse) => {
                 // console.log(axiosResponse.data.response);
