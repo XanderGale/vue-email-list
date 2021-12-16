@@ -15,17 +15,6 @@ const email_list = new Vue({
         emailsArray: [],
     },
     methods: {
-        // Soluzione alessio per asyncronizzazione
-        // getEmail(){
-        //     axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-        //     .then((axiosResponse) => {
-        //         // console.log(axiosResponse.data.response);
-        //         this.emailsArray.push(axiosResponse.data.response)
-        //         if(this.emailsArray.length<this.emailsNumber){
-        //             this.getEmail()
-        //         }
-        //     })
-        // }
     },
     created: function() {
         for (let i = 0; i < this.emailsNumber; i++){
@@ -37,3 +26,30 @@ const email_list = new Vue({
         }
     },
 });
+
+// Soluzione asincronizzazione Alessio con if per bypassare ciclo
+
+// Vue.config.devtools = true
+
+// const email_list = new Vue({
+//     el: '#app-container',
+//     data: {
+//         emailsNumber: 10,
+//         emailsArray: [],
+//     },
+//     methods: {
+//         getEmail(){
+//             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+//             .then((axiosResponse) => {
+//                 // console.log(axiosResponse.data.response);
+//                 this.emailsArray.push(axiosResponse.data.response)
+//                 if(this.emailsArray.length<this.emailsNumber){
+//                     this.getEmail()
+//                 }
+//             })
+//         }
+//     },
+//     created: function() {
+//         this.getEmail();
+//     },
+// });
